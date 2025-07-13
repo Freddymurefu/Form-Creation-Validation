@@ -7,25 +7,25 @@ const feedbackDiv = document.getElementById("form-feedback")
 form.addEventListener("submit", function(event) {
 event.preventDefault()
 
-let userName = document.getElementById("username").value.trim()
-let email = document.getElementById("email").value.trim()
-let password = document.getElementById("password").value.trim()
+let username = document.getElementById("username").value.trim()
+let Email = document.getElementById("email").value.trim()
+let Password = document.getElementById("password").value.trim()
 
 let isValid = true
 
 let messages = []
 
-if (userName.length < 3) {
+if (username.length < 3) {
     isValid = false
      messages.push("Please enter a valid username!")
 } 
 
-if (email.includes("@") === false || email.includes(".") === false) {
+if (Email.includes("@") === false || Email.includes(".") === false) {
     isValid = false
     messages.push("Please enter a valid email address!")
 }
 
-if (password.length < 8) {
+if (Password.length < 8) {
     isValid = false
     messages.push("Please enter a password of minimum 8 words")
 }
